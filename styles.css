@@ -19,6 +19,7 @@ body {
 
 #title h1 {
     text-align: center;
+    font-weight: normal;
 }
 
 #input-box {
@@ -30,6 +31,29 @@ body {
     align-items: center;
     margin-bottom: 30px;
     width: 100%;
+}
+
+#input-box p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#number {
+    margin-bottom: 15px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(10, 10, 33);
+    border: 1px solid white;
+    color: white;
+    font-size: 25px;
+}
+
+#convert-btn {
+    width: 80%;
+    border: 2px solid rgb(242, 176, 78);
+    background: linear-gradient(#fecc4c, #feac32);
+    height: 40px;
+    font-size: 22px;
 }
 
 #output {
