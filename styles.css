@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(27, 27, 48);
+    color: white;
+    display: flex;
+}
+
+#container {
+    margin: 10% auto 25% auto;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    width: 80%;
+    align-items: center;
+}
+
+#title h1 {
+    text-align: center;
+}
+
+#input-box {
+    background-color: rgb(59, 59, 77);
+    border: 3px solid white;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#output {
+    background-color: rgb(59, 59, 77);
+    border: 3px solid white;
+    height: 100px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
