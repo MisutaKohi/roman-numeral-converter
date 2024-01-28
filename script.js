@@ -2,9 +2,18 @@ const convertButton = document.getElementById('convert-btn');
 const numberInput = document.getElementById('number');
 const output = document.getElementById('output');
 
-function displayOutput(str) {
+function displayOutput(str, adjustStyling) {
     output.classList.remove('hidden');
     output.innerHTML = `<p>${str}</p>`;
+
+    if (adjustStyling === true) {
+        output.childNodes[0].classList.add('adjusted-text');
+        output.childNodes[0].classList.remove('output-text');
+    } else {
+        output.childNodes[0].classList.add('output-text');
+        output.childNodes[0].classList.remove('adjusted-text');
+    }
+
     numberInput.value = '';
 }
 
@@ -41,18 +50,21 @@ function decimalToRomanNumeral(num) {
 function isValidInput(str) {
     const num = parseInt(str);
     let error;
+    let adjustStyling = false;
 
     if (!str || str.match(/[e.]/g)) {
         error = "Please enter a valid number.";
-        displayOutput(error);
+        displayOutput(error, adjustStyling);
         return false;
     } else if (num < 1) {
         error = "Please enter a number greater than or equal to 1";
-        displayOutput(error);
+        adjustStyling = true;
+        displayOutput(error, adjustStyling);
         return false;
     } else if (num > 3999) {
         error = "Please enter a number less than or equal to 3999";
-        displayOutput(error);
+        adjustStyling = true;
+        displayOutput(error, adjustStyling);
         return false;
     } else {
         return true;
